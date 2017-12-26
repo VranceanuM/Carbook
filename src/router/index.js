@@ -4,9 +4,9 @@ import Dashboard from '@/components/Dashboard'
 import EditGarage from '@/components/EditGarage'
 import ViewGarage from '@/components/ViewGarage'
 import NewGarage from '@/components/NewGarage'
-import Page   from '@/components/Page'
-import Requests from '@/components/Requests'
-import ViewRequests from '@/components/ViewRequests'
+import Requests   from '@/components/Requests'
+import HelloWorld from '@/components/HelloWorld'
+import ViewRequests   from '@/components/ViewRequests'
 
 
 
@@ -16,6 +16,21 @@ export default new Router({
   routes: [
     {
       path: '/',
+      name: 'HelloWorld',
+      component: HelloWorld
+    },
+    {
+      path: '/requests',
+      name: 'requests',
+      component: Requests
+    },
+    {
+      path: '/',
+      name: 'view-requests',
+      component: ViewRequests
+    },
+    {
+      path: '/dashboard',
       name: 'dashboard',
       component: Dashboard
     },
@@ -34,20 +49,6 @@ export default new Router({
       name: 'view-garage',
       component: ViewGarage
     },
-    {
-      path: '/page',
-      name: 'edit-page',
-      component: Page
-    },
-    {
-      path: '/requests',
-      name: 'requests',
-      component: Requests
-    },
-    {
-      path: '/:question_id',
-      name: 'view-requests',
-      component: ViewRequests
-    }
+
   ]
 })
