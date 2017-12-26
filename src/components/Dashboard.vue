@@ -1,7 +1,7 @@
 <template>
  <div class="container">
     <div class="row">
-      <div class="col s6">
+      <div class="col s12">
         <div id="dashboard">
             <ul class="collection with-header">
               <li class="collection-header"><h4>Register by Elit</h4></li>
@@ -35,7 +35,7 @@ export default {
 created() {
   db.collection('Garage').get().then(querySnapshot =>{
     querySnapshot.forEach(doc=>{
-      console.log(doc.data());
+      // console.log(doc.data());
       const data ={
          'id':doc.id,
          'garage_id':doc.data().garage_id,
