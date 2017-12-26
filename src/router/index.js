@@ -4,6 +4,11 @@ import Dashboard from '@/components/Dashboard'
 import EditGarage from '@/components/EditGarage'
 import ViewGarage from '@/components/ViewGarage'
 import NewGarage from '@/components/NewGarage'
+import Page   from '@/components/Page'
+import Requests from '@/components/Requests'
+import ViewRequests from '@/components/ViewRequests'
+
+
 
 Vue.use(Router)
 
@@ -29,5 +34,20 @@ export default new Router({
       name: 'view-garage',
       component: ViewGarage
     },
+    {
+      path: '/page',
+      name: 'edit-page',
+      component: Page
+    },
+    {
+      path: '/requests',
+      name: 'requests',
+      component: Requests
+    },
+    {
+      path: '/:question_id',
+      name: 'view-requests',
+      component: ViewRequests
+    }
   ]
 })

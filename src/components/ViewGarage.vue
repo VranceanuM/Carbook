@@ -8,7 +8,14 @@
       </ul>
       <router-link to="/" class="btn grey">Back</router-link>
       <button  @click="deleteGarage" class="btn red">Delete</button>
+       <div class="fixed-action-btn">
+              <router-link v-bind:to="{name:'edit-garage',params:{garage_id:garage_id}}" 
+               class="btn-floating btn-large purple darken-3">
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+              </router-link>
+       </div>
   </div>
+
 </template>
 <script>
 import db from './firebaseInit'

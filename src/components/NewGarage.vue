@@ -44,6 +44,17 @@ export default {
           name:null,
           phone:null
       }
+  },
+  methods: {
+    saveGarage(){
+      db.collection('Garage').add({
+        adresaUrl: this.adresaUrl,
+        garage_id: this.garage_id,
+        name: this.name,
+        phone: this.phone
+      }).then(docRef => {this.$router.push('/')})
+        .catch(error => console.log(err))
+    }
   }
 }
 </script>

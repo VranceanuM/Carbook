@@ -1,5 +1,6 @@
 <template>
 <div>
+  <!-- Navbar -->
   <ul id="slide-out" class="side-nav">
     <li><div class="user-view">
       <div class="background">
@@ -12,10 +13,18 @@
         <li><a href="#!"><i class="material-icons">cloud</i>
         Home</a></li>
     </router-link>
-    <li><a href="#!">Second Link</a></li>
-    <li><div class="divider"></div></li>
-    <li><a class="subheader">Subheader</a></li>
-    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+    <router-link to="/">
+            <li><a href="#!"><i class="material-icons">dialer_sip</i>
+            Called Garages</a></li>
+    </router-link>
+    <router-link to="/">
+            <li><a href="#!"><i class="material-icons">euro_symbol</i>
+            Registerd</a></li>
+    </router-link>
+    <router-link to="/requests">
+            <li><a href="#!"><i class="material-icons">event</i>
+            Requests</a></li>
+    </router-link>
   </ul>
     <nav>
       <a href="#" data-activates="slide-out" class="btn button-collapse" id="btnCollapse" ><i class="material-icons">view_headline
@@ -26,7 +35,7 @@
 </template>
 <script>
 export default {
-
+  
 }
 $(document).ready(function(){
 $(".button-collapse").sideNav();
